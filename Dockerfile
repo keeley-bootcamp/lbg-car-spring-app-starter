@@ -22,6 +22,8 @@ COPY --from=build /app/target/*.jar app.jar
  
 # Expose the port if needed (optional, depending on your app)
 EXPOSE 8000
+
+VOLUME [”app/data”]
  
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
